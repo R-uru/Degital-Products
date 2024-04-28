@@ -37,7 +37,6 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    transition: max-height 0.3s ease; /* Smooth transition for opacity change */
     opacity: 1; /* Initially visible */
 }
 .menu-items.hidden {
