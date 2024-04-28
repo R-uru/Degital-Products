@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(233, 233, 233);
+}
+.bg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(30%);
+}
+.logo {
+    position: absolute;
+    object-fit: contain;
+    width: 100px;
+    margin: 10px 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+header {
+    position: relative;
+    text-align: right;
+    padding: 0;
+    list-style-type: none;
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: max-height 0.3s ease; /* Smooth transition for opacity change */
+    opacity: 1; /* Initially visible */
+}
+.menu-items.hidden {
+    opacity: 0; /* Hide menu items */
+}
+.menu-items li {
+    margin: 10px;
+    list-style-type: none;
+}
+.menu-items li a {
+    text-decoration: none; 
+    color: rgb(255, 255, 255);
+}
+h2 {
+    text-align: center;
+    color: aliceblue;
+    position: relative;
+    margin-top: 15%;
+}
+#menu-toggle {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 393px) {
+    .menu-items {
+        display: block;
+        opacity: 0; /* Initially hidden */
+        position: absolute;
+        top: 40px;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        text-align: center;
+        transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+    }
+
+    .menu-items.show-menu {
+        opacity: 1; /* Show menu items when .show-menu class is added */
+    }
+    
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        z-index: 2;
+        color: aliceblue;
+    }
+    
+    #menu-toggle:checked ~ .menu-items {
+        z-index:  1;
+        display: block;
+    }
+    h2 {
+        margin-top: 30%;
+    }
+
+    .menu-items li {
+        margin: 50px 0;
+    }
+}
