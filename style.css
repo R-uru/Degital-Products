@@ -61,7 +61,7 @@ h2 {
     visibility: hidden;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .menu-items {
         display: block;
         opacity: 0; /* Initially hidden */
