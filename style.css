@@ -103,12 +103,10 @@ h2 {
 .main-products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    border: 1px solid red;
     width: 880px;
     position: relative;
-    width: 50%;
-    height: 50%;
-    transition: ;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 .card {
     margin: 10px;
@@ -143,22 +141,7 @@ hr {
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* TODO: Responsive Area */
 @media (max-width: 500px) {
     .menu-items {
         display: block;
@@ -209,5 +192,15 @@ hr {
     }
     .button {
         width: 80px;
+    }
+
+    /** main products */
+    .main-products {
+        width: 340px;
+        border: 1px solid red;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .card {
+        width: 150px    ;
     }
 }
