@@ -200,6 +200,10 @@ hr {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     .card {
+        height: 250px;
         width: 150px    ;
+    }
+    .image-container {
+        height: 150px;
     }
 }
